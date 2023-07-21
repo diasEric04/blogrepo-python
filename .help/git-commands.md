@@ -13,6 +13,12 @@
 
 # ================================
 
+# troca o nome da branch atual
+
+## `git branch -m` *nome_da_branch*
+
+# ================================
+
 ## trocar de branch
 
 ## `git checkout` *nome_da_branch*
