@@ -1,5 +1,20 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>Olá mundo</h1>
+  <main class="main-content section-wrapper">
+    <div class="section-content-wide">
+      <div class="section-gap">
+        {% if page_obj %}
+          <div class="card-grid">
+            {% for post in page_obj %}
+              {% include 'blog/partials/_post-card.html' %}
+              {% comment %} with i=forloop.counter0 {% endcomment %}
+            {% endfor %}
+          </div>
+        {% else %}
+          {% include 'blog/partials/_not-found.html' %}
+        {% endif %}
+      </div>
+    </div>
+  </main>
 {% endblock content %}
